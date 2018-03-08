@@ -1,4 +1,5 @@
 /Api_Example1/nbproject/private/
+<<<<<<< HEAD
 /ETL/etl/nbproject/private/
 /ETL/serie1_chap10_lecture/nbproject/private/
 /ETL/serie1_chap10_lecture/build/
@@ -7,3 +8,12 @@
 /ETL/test/build/
 /ETL/test2/nbproject/private/
 /ETL/test2/build/
+=======
+/Api_Example1/build/
+/Practice/nbproject/private/
+/Practice/build/
+/Practice/dist/
+/Practice_1/nbproject/private/
+/Intra_Amr_Seoudy/nbproject/private/
+/Intra_Amr_Seoudy/build/
+>>>>>>> d6e48f6651fdf927f64e57a784ed5c38c643161a
