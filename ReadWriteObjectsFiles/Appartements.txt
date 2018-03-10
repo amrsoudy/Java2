@@ -1,5 +1,3 @@
-
-
 ﻿4,8961,Rue de Marseille,Québec,Montreal,H1L1S3,6-1/2,2,OUI,NON,false
 1,8961,Rue de Marseille,Québec,Montreal,H1L1S3,5-1/2,1,OUI,NON,false
 3,8961,Rue de Marseille,Québec,Montreal,H1L1S3,5-1/2,1,NON,NON,false

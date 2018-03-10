@@ -1,7 +1,0 @@
-﻿Thomas,Marc Antoine,1988-03-15,514 644-8958,256-452-441,8956,Rue de Teck,Québec,Montreal,H1L1L2,false
-
-Thomas,Jackson,1988-03-15,514 896-5652,542-526-778,8954,Rue Adrien Pernier,Québec,Laval,H1F1R4,true
-
-Levesque,Robert,1988-03-15,452 859-4522,526-565-452,7458,Rue des Ormeaux,Québec,Montreal,H1L3F5,false
-
-Adrien,Robert,1988-03-15,589-859-4456,525-458-552,2112,Bois de Boulogne,Québec,Laval,1H67Y8,false

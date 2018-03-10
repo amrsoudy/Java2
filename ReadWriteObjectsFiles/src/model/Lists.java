@@ -11,6 +11,6 @@ import java.util.ArrayList;
  *
  * @author AMR
  */
-public class Lists extends ArrayList<Object>{
+public class Lists extends ArrayList<ObjectClass>{
     
 }
