@@ -1,4 +1,14 @@
 /Api_Example1/nbproject/private/
+<<<<<<< HEAD
+/ETL/etl/nbproject/private/
+/ETL/serie1_chap10_lecture/nbproject/private/
+/ETL/serie1_chap10_lecture/build/
+/ETL/etl/build/
+/ETL/test/nbproject/private/
+/ETL/test/build/
+/ETL/test2/nbproject/private/
+/ETL/test2/build/
+=======
 /Api_Example1/build/
 /Practice/nbproject/private/
 /Practice/build/
@@ -6,6 +16,7 @@
 /Practice_1/nbproject/private/
 /Intra_Amr_Seoudy/nbproject/private/
 /Intra_Amr_Seoudy/build/
+<<<<<<< HEAD
 /sample/nbproject/private/
 /sample/build/
 /Practice_1/build/
@@ -17,3 +28,8 @@
 /Collection/build/
 /Collection/dist/
 /JavaApplication15_1/nbproject/private/
+=======
+>>>>>>> d6e48f6651fdf927f64e57a784ed5c38c643161a
+/ReadWriteObjectsFiles/nbproject/private/
+/ReadWriteObjectsFiles/build/
+>>>>>>> 3f1ff750176549e0a77cbf8c52933253e0e4e06c
