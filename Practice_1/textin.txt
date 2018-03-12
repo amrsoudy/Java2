@@ -1,2 +1,1 @@
-amr,10,20
-asmaa,30,50
+asmaaa
