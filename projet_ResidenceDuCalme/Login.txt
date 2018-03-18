@@ -1,0 +1,3 @@
+m,1,admin,THOMAS,Marc Antoine
+berfranc,Jepasse123,agent,Franc,Bertho
+beraugusma,Jepasse1234,agent,Augusma,Berlin
