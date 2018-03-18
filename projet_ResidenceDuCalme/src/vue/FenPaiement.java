@@ -86,7 +86,7 @@ public class FenPaiement extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wizard.jpg"))); // NOI18N
 
@@ -116,7 +116,7 @@ public class FenPaiement extends javax.swing.JFrame {
 
         jLabel1.setText("Nom");
 
-        CBCnom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        CBCnom.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
         CBCnom.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
                 CBCnomComponentAdded(evt);
@@ -141,7 +141,7 @@ public class FenPaiement extends javax.swing.JFrame {
 
         jLabel3.setText("Mountant");
 
-        txtMountant.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtMountant.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Exit.png"))); // NOI18N
         jButton2.setText("Retour");
@@ -153,14 +153,14 @@ public class FenPaiement extends javax.swing.JFrame {
 
         jLabel5.setText("Prénom");
 
-        CBCprenom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        CBCprenom.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel6.setText("Mois");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
-        CBCappNo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        CBCappNo.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

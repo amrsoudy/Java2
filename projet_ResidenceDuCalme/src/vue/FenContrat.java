@@ -116,8 +116,6 @@ public class FenContrat extends javax.swing.JFrame {
         txtDuree = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        txtDateDebut = new com.toedter.calendar.JDateChooser();
-        txtDateFin = new com.toedter.calendar.JDateChooser();
         jPanel6 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         txtMontant = new javax.swing.JTextField();
@@ -136,14 +134,13 @@ public class FenContrat extends javax.swing.JFrame {
         txtMontantFreq = new javax.swing.JComboBox<>();
         txtCoutFreq = new javax.swing.JComboBox<>();
         txtMontantTotalFreq = new javax.swing.JComboBox<>();
-        txtDatePremierTerme = new com.toedter.calendar.JDateChooser();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Création d'un contrat");
         setResizable(false);
 
-        jTabGlobal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, null, java.awt.Color.gray));
+        jTabGlobal.setBorder(javax.swing.BorderFactory.createBevelBorder(1, null, null, null, java.awt.Color.gray));
         jTabGlobal.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabGlobal.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -151,7 +148,7 @@ public class FenContrat extends javax.swing.JFrame {
             }
         });
 
-        panelClientSearch.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 51, 51))); // NOI18N
+        panelClientSearch.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 2, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 51, 51))); // NOI18N
 
         jLabel1.setText("Nom:");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -159,13 +156,13 @@ public class FenContrat extends javax.swing.JFrame {
         jLabel2.setText("Prénom:");
         jLabel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        txtNom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtNom.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
-        txtPrenom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtPrenom.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         btn_search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/View.png"))); // NOI18N
         btn_search.setText("Recherche");
-        btn_search.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_search.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         btn_search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_searchActionPerformed(evt);
@@ -208,16 +205,19 @@ public class FenContrat extends javax.swing.JFrame {
         panelClientSearchLayout.setVerticalGroup(
             panelClientSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelClientSearchLayout.createSequentialGroup()
-                .addGroup(panelClientSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelClientSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnUpdateRow, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelClientSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btn_search)))
+                    .addGroup(panelClientSearchLayout.createSequentialGroup()
+                        .addGroup(panelClientSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panelClientSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_search)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelClientSearchLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnUpdateRow)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4))
         );
@@ -306,7 +306,7 @@ public class FenContrat extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        lblImageApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lblImageApp.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -384,7 +384,7 @@ public class FenContrat extends javax.swing.JFrame {
 
         txtNomBail.setEditable(false);
         txtNomBail.setBackground(new java.awt.Color(255, 255, 255));
-        txtNomBail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtNomBail.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
         txtNomBail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomBailActionPerformed(evt);
@@ -397,17 +397,17 @@ public class FenContrat extends javax.swing.JFrame {
 
         txtNoBail.setEditable(false);
         txtNoBail.setBackground(new java.awt.Color(255, 255, 255));
-        txtNoBail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtNoBail.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         txtRueBail.setEditable(false);
         txtRueBail.setBackground(new java.awt.Color(255, 255, 255));
-        txtRueBail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtRueBail.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel9.setText("No de téléphone");
 
         txtTelBail.setEditable(false);
         txtTelBail.setBackground(new java.awt.Color(255, 255, 255));
-        txtTelBail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtTelBail.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         javax.swing.GroupLayout jPanelBailleurLayout = new javax.swing.GroupLayout(jPanelBailleur);
         jPanelBailleur.setLayout(jPanelBailleurLayout);
@@ -465,7 +465,7 @@ public class FenContrat extends javax.swing.JFrame {
 
         txtNomLoc.setEditable(false);
         txtNomLoc.setBackground(new java.awt.Color(255, 255, 255));
-        txtNomLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtNomLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel11.setText("No");
 
@@ -473,11 +473,11 @@ public class FenContrat extends javax.swing.JFrame {
 
         txtNoLoc.setEditable(false);
         txtNoLoc.setBackground(new java.awt.Color(255, 255, 255));
-        txtNoLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtNoLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         txtRueLoc.setEditable(false);
         txtRueLoc.setBackground(new java.awt.Color(255, 255, 255));
-        txtRueLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtRueLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
         txtRueLoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtRueLocActionPerformed(evt);
@@ -488,13 +488,13 @@ public class FenContrat extends javax.swing.JFrame {
 
         txtTelLoc.setEditable(false);
         txtTelLoc.setBackground(new java.awt.Color(255, 255, 255));
-        txtTelLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtTelLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel33.setText("Prénom");
 
         txtPNomLoc.setEditable(false);
         txtPNomLoc.setBackground(new java.awt.Color(255, 255, 255));
-        txtPNomLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtPNomLoc.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         javax.swing.GroupLayout jPanelLocataireLayout = new javax.swing.GroupLayout(jPanelLocataire);
         jPanelLocataire.setLayout(jPanelLocataireLayout);
@@ -562,13 +562,13 @@ public class FenContrat extends javax.swing.JFrame {
 
         txtTypeApp.setEditable(false);
         txtTypeApp.setBackground(new java.awt.Color(255, 255, 255));
-        txtTypeApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtTypeApp.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel16.setText("No étage");
 
         txtEtageApp.setEditable(false);
         txtEtageApp.setBackground(new java.awt.Color(255, 255, 255));
-        txtEtageApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtEtageApp.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel17.setText("Des meubles sont loués et inclus dans le loyer.");
 
@@ -580,25 +580,25 @@ public class FenContrat extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(0, 51, 102));
         jLabel8.setText("DESCRIPTION ET DESTINATION DU LOGEMENT LOUÉ, DES ACCESSOIRES ET DÉPENDANCES");
         jLabel8.setToolTipText("");
-        jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
 
         jLabel28.setText("No");
 
         txtNoApp.setEditable(false);
         txtNoApp.setBackground(new java.awt.Color(255, 255, 255));
-        txtNoApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtNoApp.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel29.setText("Rue");
 
         txtRueApp.setEditable(false);
         txtRueApp.setBackground(new java.awt.Color(255, 255, 255));
-        txtRueApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtRueApp.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel30.setText("App");
 
         txtNunAApp.setEditable(false);
         txtNunAApp.setBackground(new java.awt.Color(255, 255, 255));
-        txtNunAApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtNunAApp.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         txtMeuble.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "OUI", "NON" }));
         txtMeuble.addActionListener(new java.awt.event.ActionListener() {
@@ -700,7 +700,7 @@ public class FenContrat extends javax.swing.JFrame {
 
         jLabel22.setText("Date de fin");
 
-        txtDuree.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtDuree.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel27.setText("(mois)");
@@ -708,7 +708,7 @@ public class FenContrat extends javax.swing.JFrame {
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(0, 51, 102));
         jLabel31.setText("DURÉE DU BAIL");
-        jLabel31.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel31.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
 
         javax.swing.GroupLayout jPanelPrixLayout = new javax.swing.GroupLayout(jPanelPrix);
         jPanelPrix.setLayout(jPanelPrixLayout);
@@ -722,13 +722,9 @@ public class FenContrat extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel27)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanelPrixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDateDebut, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanelPrixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel22)
-                    .addComponent(txtDateFin, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel22)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -742,12 +738,9 @@ public class FenContrat extends javax.swing.JFrame {
                     .addComponent(jLabel21)
                     .addComponent(jLabel22))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanelPrixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelPrixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtDuree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel27))
-                    .addComponent(txtDateDebut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDateFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelPrixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDuree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27))
                 .addContainerGap())
         );
 
@@ -756,7 +749,7 @@ public class FenContrat extends javax.swing.JFrame {
         jLabel23.setText("Montant du loyer");
 
         txtMontant.setText("0");
-        txtMontant.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtMontant.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
         txtMontant.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txtMontantFocusLost(evt);
@@ -778,7 +771,7 @@ public class FenContrat extends javax.swing.JFrame {
         jLabel24.setText("Cout total des services");
 
         txtCout.setText("0");
-        txtCout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtCout.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
         txtCout.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txtCoutFocusLost(evt);
@@ -789,7 +782,7 @@ public class FenContrat extends javax.swing.JFrame {
 
         txtMontantTotal.setEditable(false);
         txtMontantTotal.setBackground(new java.awt.Color(255, 255, 255));
-        txtMontantTotal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        txtMontantTotal.setBorder(javax.swing.BorderFactory.createBevelBorder(1));
         txtMontantTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontantTotalActionPerformed(evt);
@@ -801,7 +794,7 @@ public class FenContrat extends javax.swing.JFrame {
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(0, 51, 102));
         jLabel32.setText("LOYER");
-        jLabel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel32.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
 
         jTextPane1.setEditable(false);
         jTextPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -811,7 +804,7 @@ public class FenContrat extends javax.swing.JFrame {
         btnValider.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnValider.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Yes.png"))); // NOI18N
         btnValider.setText("Valider");
-        btnValider.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnValider.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         btnValider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnValiderActionPerformed(evt);
@@ -821,7 +814,7 @@ public class FenContrat extends javax.swing.JFrame {
         btnQuitter.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnQuitter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Exit.png"))); // NOI18N
         btnQuitter.setText("Quitter");
-        btnQuitter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnQuitter.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         btnQuitter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnQuitterActionPerformed(evt);
@@ -887,8 +880,7 @@ public class FenContrat extends javax.swing.JFrame {
                             .addComponent(txtMontantTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtMontantTotalFreq, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel26)
-                    .addComponent(txtDatePremierTerme, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel26))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -912,15 +904,13 @@ public class FenContrat extends javax.swing.JFrame {
                             .addComponent(jLabel24)
                             .addComponent(jLabel26))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDatePremierTerme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtCout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtCoutFreq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCoutFreq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnValider)
@@ -932,7 +922,7 @@ public class FenContrat extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 102));
         jLabel13.setText("ENTRE LE LOCATEUR                                                                         ET LE LOCATAIRE");
         jLabel13.setToolTipText("");
-        jLabel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel13.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -1255,9 +1245,6 @@ public class FenContrat extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> txtChauffage;
     private javax.swing.JTextField txtCout;
     private javax.swing.JComboBox<String> txtCoutFreq;
-    private com.toedter.calendar.JDateChooser txtDateDebut;
-    private com.toedter.calendar.JDateChooser txtDateFin;
-    private com.toedter.calendar.JDateChooser txtDatePremierTerme;
     private javax.swing.JTextField txtDuree;
     private javax.swing.JTextField txtEtageApp;
     private javax.swing.JComboBox<String> txtMeuble;
