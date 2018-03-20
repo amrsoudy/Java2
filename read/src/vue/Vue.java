@@ -7,6 +7,9 @@ package vue;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import model.Manipaltion;
@@ -97,7 +100,6 @@ public class Vue extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.BorderLayout());
 
         parent.setLayout(new java.awt.CardLayout());
 
@@ -315,13 +317,6 @@ public class Vue extends javax.swing.JFrame {
             .addGroup(p4Layout.createSequentialGroup()
                 .addGroup(p4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(p4Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(46, 46, 46)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(p4Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addGroup(p4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(p4Layout.createSequentialGroup()
@@ -335,8 +330,15 @@ public class Vue extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p4Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(43, 43, 43)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(807, Short.MAX_VALUE))
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(p4Layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(812, Short.MAX_VALUE))
         );
         p4Layout.setVerticalGroup(
             p4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -353,12 +355,12 @@ public class Vue extends javax.swing.JFrame {
                 .addGroup(p4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 566, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 316, Short.MAX_VALUE)
                 .addGroup(p4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(jButton5)
                     .addComponent(jButton6))
-                .addGap(32, 32, 32))
+                .addGap(282, 282, 282))
         );
 
         parent.add(p4, "card6");
@@ -577,9 +579,26 @@ public class Vue extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        String[] list = {jTextField1.getText(), jTextField2.getText(), jTextField3.getText()};
-        mani.ecrire("clients.txt", list);
-        mani.addObject("client", list);
+
+       
+        try {
+            ArrayList<String[]> arr = mani.ReadFile("clients.txt");
+            for (String[] s : arr) {
+                if (s[0].equals(jTextField1.getText())) {
+                   
+                    throw new Exception("le nom exist deja ");
+              
+            }
+           
+            }
+            
+                String[] list = {jTextField1.getText(), jTextField2.getText(), jTextField3.getText()};
+                mani.ecrire("clients.txt", list);
+                mani.addObject("client", list);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+        } 
 
 
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -611,12 +630,11 @@ public class Vue extends javax.swing.JFrame {
         ArrayList<String[]> arr = mani.ReadFile("App.txt");
         DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
         model.setRowCount(0);
-        
 
         for (String[] s : arr) {
-            if(jTextField6.getText().equals(s[0].charAt(0))){
-            
-                            model.addRow(s);
+            if (jTextField6.getText().equals(s[0].charAt(0))) {
+
+                model.addRow(s);
 
             }
             if (s[0].equals(jTextField6.getText())) {
@@ -656,7 +674,6 @@ public class Vue extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         mani.print(jTable2);
-
 
 
     }//GEN-LAST:event_jButton10ActionPerformed

@@ -40,6 +40,8 @@ public class Manipaltion {
 
             bw.write(line);
             bw.newLine();
+                        JOptionPane.showMessageDialog(null, " CLIENT text Added");
+
 
         } catch (IOException ex) {
             Logger.getLogger(Manipaltion.class.getName()).log(Level.SEVERE, null, ex);

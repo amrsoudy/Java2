@@ -18,7 +18,9 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -199,6 +201,53 @@ public class Utilitaire {
         }
         
     }    
+
+    public void readBin(String path, JTable tab1) {
+        File file = new File(path);
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        DefaultTableModel model =(DefaultTableModel)tab1.getModel();
+        model.setRowCount(0);
+        
+        
+        try {
+            fis = new FileInputStream(file);
+            ois = new ObjectInputStream(fis);
+            
+            while(fis.available()>0){
+              produit p = (produit)ois.readObject();
+              ArrayList<produit> arr = new ArrayList<>(); 
+              arr.add(p);
+              
+              for (produit x : arr){
+              
+                  String [] s = {x.getNom(),x.getPrenom(),String.valueOf(x.getAge()),String.valueOf(x.getTel())};
+                  model.addRow(s);
+                               
+          }
+              
+              
+              
+              
+              
+            
+            
+            }
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Utilitaire.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Utilitaire.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Utilitaire.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+
+
+
+    }
 
 
 }    
