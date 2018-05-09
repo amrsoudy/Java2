@@ -37,7 +37,7 @@ public class util {
 
     }
 
-    public void select(String TableName, String selection) {
+    public void select(String TableName, String selection) {// noclient,nomclient
         ResultSet rs = null;
         Statement stm = null;
         ResultSetMetaData rsmd = null;

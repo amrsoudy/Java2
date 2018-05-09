@@ -56,13 +56,13 @@ public class Main {
 //    }
 //
 
-       int num = insertClient(con);
+       int num = insertClient(con, 666);
         System.out.println("inserted " + num);
     }
-    private static int insertClient(Connection con) throws SQLException {
+    private static int insertClient(Connection con,int no) throws SQLException {
          String sql = "insert into client values(?,?,?)";
         PreparedStatement stm = con.prepareStatement(sql);
-        stm.setInt(1, 333);
+        stm.setInt(1, no);
         stm.setString(2, "Amr");
         stm.setString(3, "01010101001011");
         int num = stm.executeUpdate();
